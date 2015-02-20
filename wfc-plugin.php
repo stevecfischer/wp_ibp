@@ -2,7 +2,7 @@
 /*
 Plugin Name: WFC Ifbyphone
 Description: General extended functions
-Version: 2.3
+Version: 2.4
 Author: Steve Fischer
 License: GPLv2 or later
 */
