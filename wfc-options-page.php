@@ -63,25 +63,25 @@ function wfc_ext_render_form() {
                       </tr>
                       <tr valign="top">
                             <th scope="row">Enter ibp_public_key:</th>
-                            <td><input name="wfc_ext_ibp_public_key" type="text" 
+                            <td><input name="wfc_ext_ibp_public_key" type="text" placeholder="Enter Public Key"
                               value="<?php echo get_option( 'wfc_ext_ibp_public_key' ); ?>" />
                             </td>
                         </tr>
                         <tr valign="top">
                             <th scope="row">Enter ibp_formatting:</th>
-                            <td><input name="wfc_ext_ibp_formatting" type="text" 
+                            <td><input name="wfc_ext_ibp_formatting" type="text" placeholder="true"
                               value="<?php echo get_option( 'wfc_ext_ibp_formatting' ); ?>" />
                             </td>
                         </tr>
                         <tr valign="top">
                             <th scope="row">Enter ibp_keyword_set:</th>
-                            <td><input name="wfc_ext_ibp_keyword_set" type="text" 
+                            <td><input name="wfc_ext_ibp_keyword_set" type="text" placeholder="Enter Keyword Set"
                               value="<?php echo get_option( 'wfc_ext_ibp_keyword_set' ); ?>" />
                             </td>
                         </tr>   
                         <tr valign="top">
                             <th scope="row">Enter API Key:</th>
-                            <td><input name="wfc_ext_ibp_api_key" type="text" 
+                            <td><input name="wfc_ext_ibp_api_key" type="text" placeholder="If using API enter Key here"
                               value="<?php echo get_option( 'wfc_ext_ibp_api_key' ); ?>" />
                             </td>
                         </tr>                        
@@ -144,9 +144,9 @@ if ( get_option( 'wfc_ext_dynamic_number_replace' ) == "1"){
 }
 
 function wfc_swap_phone_for_code($c){
-  // $rn = get_option( 'wfc_ext_real_number' );
-  // $prep = str_replace("-", "\-", $rn);
-  $pattern = '/704\-323\-8004/i';
+  $rn = get_option( 'wfc_ext_real_number' );
+  $prepped = addslashes($rn);
+  $pattern = "/$prepped/i";
   $new_c = preg_replace($pattern, "[wfc_phone]", $c);
   return $new_c;
 }
