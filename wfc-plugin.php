@@ -2,7 +2,7 @@
 /*
 Plugin Name: WFC Ifbyphone
 Description: General extended functions
-Version: 2.4
+Version: 2.4.1
 Author: Steve Fischer
 License: GPLv2 or later
 */
@@ -19,7 +19,7 @@ if ( !defined( 'IBP' ) ) {
 
 if ( !defined( 'WFC_EXT_URL' ) ) {
   $aa = __FILE__;
-  $plugin_dir_url = plugin_dir_url( basename( $aa ) ) . 'wfc-ifbyphone/';
+  $plugin_dir_url = plugin_dir_url( basename( $aa ) ) . 'wp_ibp/';
   define( 'WFC_EXT_URL', $plugin_dir_url );
 }
 
